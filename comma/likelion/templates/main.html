@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롯데사회공헌프로젝트</title>
+    {% load static %}
+    <link rel="stylesheet" href= "{% static 'css/main_style.css' %}">
+    <!-- 이 예제에서는 필요한 js, css 를 링크걸어 사용 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+</head>
+
+<header>
+    <div>
+        <h2 class = "header_logo"><a href = "comma\likelion\templates\main.html" title = "홈페이지 메인으로 가기"><img src = "#" alt = ""></a>로고이름</h2>
+        <div>
+            <ul class = "friendShip">
+                <li><a href = "#" title = "공지사항 페이지 가기">공지사항</a><span>|</span></li>
+                <li><a href = "#" target = "_blank" title = "롯데그룹 홈페이지 가기">롯데그룹</a><span>|</span></li>
+            </ul>
+
+            <ul class = "SNS">
+                <li class="facebook"><a href="https://www.facebook.com/lotte" target="_blank" title="롯데그룹 사회공헌 페이스북 가기">페이스북</a><span>|</span></li>
+				<li class="blog"><a href="http://blog.lotte.co.kr/" target="_blank" title="롯데그룹 사회공헌 블로그 가기">blog</a><span>|</span></li>
+				<li class="youtube"><a href="https://www.youtube.com/user/LOTTELIVE" target="_blank" title="롯데그룹 사회공헌 유투브 가기">youtube</a><span>|</span></li>
+            </ul>
+        </div>
+    </div>
+    
+    <nav id = "menu">
+        <ul class = "main">
+            <li><a href = "#">소개</a>
+                <ul class = "sub">
+                    <li><a href = "#">프로그램 개요</a></li>
+                    <li><a href = "#">비전</a></li>
+                </ul>
+            </li>
+            <li><a href = "#">프로그램</a>
+                <ul class = "sub">
+                    <li><a href = "comma\notice\templates\program.html">프로그램 신청</a></li>
+                    <li><a href = "#">클래스</a></li>
+                </ul>
+            </li>
+            <li><a href = "#">활동내용</a>
+                <ul class = "sub">
+                    <li><a href = "comma\notice\templates\supporters.html">서포터즈 신청</a></li>
+                    <li><a href = "#">팀별 활동내용</a></li>
+                    <li><a href = "#">활동후기</a></li>
+                </ul>
+            </li>
+            <li><a href = "#">커뮤니티</a>
+                <ul class = "sub">
+                    <li><a href = "{% url 'notice' %}">공지사항</a></li>
+                    <li><a href = "#">FAQ</a></li>
+                    <li><a href = "#">1:1 문의</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+</header>
+
+<body>
+    <div id = "container">
+        <img src="/static/img/main_poster.jpg" style="margin-left: auto; margin-right: auto; display: block;"/>
+    </div>
+    
+    <br><br><br><br>
+
+    
+
+    <footer>
+        <br><br><br><br>
+        <h2 class="container">Lotte Project</h2><br><br>
+        <li>Copyright ⓒ 2020 조선대학교 멋쟁이 사자처럼 8기 해커톤 프로젝트</li>
+    </footer>
+</body>
+</html>
