@@ -1,0 +1,93 @@
+body {
+  margin : 0px
+}
+
+
+.main_text {
+  color : black;
+  font-size : 100%;
+  width : 250px;
+  height : 55px;
+  padding-left: 10px;
+  margin : 0px 0px 0px 280px ;
+
+}
+
+.main_text_four {
+  color : black;
+  font-size : 100%;
+  width : 250px;
+  height : 55px;
+  padding-left: 10px;
+  margin : 0px 0px 0px 0px;
+
+}
+
+
+
+
+.main_text_two {
+  display:inline-block;
+  margin : 0px 0px 0px 20px;
+}
+
+.main_text_three {
+  background-color: #e9e9e9;
+  
+ 
+}
+
+
+.main_text_five {
+  width: 30%;
+  margin: 25px 0px 0px 280px;
+  border: 1px solid #000000;
+  display:inline-block;
+  
+
+}
+
+.main_text_six img{
+ 
+  
+  width: 100%;
+  height: 300px;
+  
+}
+
+.main_text_seven {
+  padding: 5px 10px;
+	background-color: white;
+  text-align: center;
+  
+}
+/*------------------------------------------------------------*/
+
+.main_text_eight {
+  width: 30%;
+  margin: 25px 0px 0px 60px;
+  border: 1px solid #000000;
+  display:inline-block;
+  
+  
+  
+}
+
+.main_text_nine img {
+  
+  width: 100%;
+  height: 300px;
+  
+
+}
+
+.main_text_ten {
+  padding: 5px 10px;
+	background-color: white;
+  text-align: center;
+  
+}
+
+/*---------------------------------------------------------------*/
+
+
