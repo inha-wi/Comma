@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로그램 폼 작성</title>
+    <link rel="stylesheet" href="program_style.css">
+</head>
+
+<form action="/my-handling-form-page" method="post">
+    <div>
+      <label for="name">프로그램 이름:</label>
+      <select name="program" size="1">
+          <option value = "one">프로그램1</option>
+          <option value="two">프로그램2</option>
+      </select>
+      <label for="area">지역:</label>
+      <select name="area" size="1">
+          <option value = "one">1</option>
+          <option value="two">2</option>
+          <option value="three">3</option>
+          <option value="four">4</option>
+          <option value="etc">기타</option>
+      </select>
+    </div>
+    <div>
+      <label for="name">성명:</label>
+      <input type="text" id="name" name="user_name">
+      <label for="name">생년월일:</label>
+      <input type="date" id="birth" name="user_birth">
+      <label for="name">성별:</label>
+      <input type="radio" id="sex" name="user_sex" value="남" checked>남
+      <input type="radio" id="sex" name="user_sex" value="여">여
+    </div>
+
+    <div>
+      <label for="name">주소:</label>
+      <input type="text" id="address" name="user_address">
+    </div>
+  
+    <div>
+      <label for="mail">E-mail:</label>
+      <input type="email" id="mail" name="user_email">
+      <label for="phone">휴대폰:</label>
+      <input type="tel" id="phone" name="user_phone">
+    </div>
+  
+    <div>
+      <label for="etc">세부사항:</label>
+      <textarea id="etc" name="user_etc"></textarea>
+    </div>
+   
+    <div class="button">
+      <button type="reset">다시입력</button>
+      <button type="submit">제출</button>
+    </div>
+    
+  </form>
