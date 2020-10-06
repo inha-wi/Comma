@@ -15,7 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls.static import static
+from django.conf import settings
+import likelion.views
+import notice.views
+import program.views
+import supporter.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', likelion.views.main, name="main"),
+    path('program/', notice.views.program, name="program"),
+    path('notice_page/', notice.views.notice_page, name="notice_page"),   
+    path('supporters/', notice.views.supporters, name="supporters"),
+    path('supporter_page/', supporter.views.supporter_page, name="supporter_page"),
+    path('class_page/', program.views.class_page, name="class_page"),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

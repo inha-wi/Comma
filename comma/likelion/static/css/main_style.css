@@ -6,7 +6,7 @@
 }
 
 body {
-    font : 17px 'Nanum Gothic', sans-serif;
+    font : 20px 'Nanum Gothic', sans-serif;
 }
 
 a{
@@ -23,7 +23,7 @@ span {
 }
 
 Header {
-    height : 100px;
+    height : 140px;
     background-color : white;
     border : 1px solid white;
     position : relative;
@@ -36,7 +36,7 @@ Header {
     width : auto; height : auto;
     line-height : 100px;
     float : left;
-    padding : 0px 100px;
+    padding : 20px 140px;
 }
 
 .friendShip{

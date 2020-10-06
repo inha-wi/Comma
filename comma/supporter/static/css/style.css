@@ -1,6 +1,3 @@
-body{
-	margin:0px
-}
 
 .imgcollage1{
 	width: 20%;
@@ -119,8 +116,7 @@ body{
 }
 
 body{
-	position: fixed;
-	bottom: 10px;
+	position: relative;
 	/* width: 100% */
 	left: 0;
 	right: 0;

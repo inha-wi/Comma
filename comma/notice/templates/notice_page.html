@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-type" content="text/html; charset-euc-kr"/>
-  <link rel="stylesheet" href="style.css">
+  {% load static %}
+  <link rel="stylesheet" href= "{% static 'css/main_style.css' %}">
   <title>공지사항</title>
   <style type="text/css">
   
@@ -71,11 +72,11 @@
 
  <header>
     <div>
-        <h2 class = "header_logo"><a href = "#" title = "홈페이지 메인으로 가기"><img src = "#" alt = ""></a>로고이름</h2>
+        <h2 class = "header_logo"><a href = "{% url 'main' %}" title = "홈페이지 메인으로 가기"><img src = "/static/img/lottelogo.jpg" alt = ""></a></h2>
         <div>
             <ul class = "friendShip">
-                <li><a href = "#" title = "공지사항 페이지 가기">공지사항</a><span>|</span></li>
-                <li><a href = "#" target = "_blank" title = "롯데그룹 홈페이지 가기">롯데그룹</a><span>|</span></li>
+                <li><a href = "{% url 'notice_page' %}" title = "공지사항 페이지 가기">공지사항</a><span>|</span></li>
+                <li><a href = "https://www.lotte.co.kr/main.do" target = "_blank" title = "롯데그룹 홈페이지 가기">롯데그룹</a><span>|</span></li>
             </ul>
 
             <ul class = "SNS">
@@ -96,20 +97,20 @@
             </li>
             <li><a href = "#">프로그램</a>
                 <ul class = "sub">
-                    <li><a href = "#">프로그램 신청</a></li>
-                    <li><a href = "#">클래스</a></li>
+                    <li><a href = "{% url 'program' %}">프로그램 신청</a></li>
+                    <li><a href = "{% url 'class_page' %}">클래스</a></li>
                 </ul>
             </li>
             <li><a href = "#">활동내용</a>
                 <ul class = "sub">
-                    <li><a href = "#">서포터즈 신청</a></li>
-                    <li><a href = "#">팀별 활동내용</a></li>
+                    <li><a href = "{% url 'supporters' %}">서포터즈 신청</a></li>
+                    <li><a href = "{% url 'supporter_page' %}">팀별 활동내용</a></li>
                     <li><a href = "#">활동후기</a></li>
                 </ul>
             </li>
             <li><a href = "#">커뮤니티</a>
                 <ul class = "sub">
-                    <li><a href = "Community\notice.html">공지사항</a></li>
+                    <li><a href = "{% url 'notice_page' %}">공지사항</a></li>
                     <li><a href = "#">FAQ</a></li>
                     <li><a href = "#">1:1 문의</a></li>
                 </ul>
@@ -181,4 +182,10 @@
   
   
   </body>
+
+  <footer>
+    <br><br><br><br>
+    <h2 class="container">Lotte Project</h2><br><br>
+    <li>Copyright ⓒ 2020 조선대학교 멋쟁이 사자처럼 8기 해커톤 프로젝트</li>
+</footer>
 </html>

@@ -4,10 +4,62 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>클래스 웹페이지</title>
-    <link rel="stylesheet" href="newstyle.css">
+    {% load static %}
+    <link rel="stylesheet" href= "{% static 'css/main_style.css' %}">
+    <link rel="stylesheet" href= "{% static 'css/newstyle.css' %}">
     
 </head>
+
+<header>
+    <div>
+        <h2 class = "header_logo"><a href = "{% url 'main' %}" title = "홈페이지 메인으로 가기"><img src = "/static/img/lottelogo.jpg" alt = ""></a></h2>
+        <div>
+            <ul class = "friendShip">
+                <li><a href = "{% url 'notice_page' %}" title = "공지사항 페이지 가기">공지사항</a><span>|</span></li>
+                <li><a href = "https://www.lotte.co.kr/main.do" target = "_blank" title = "롯데그룹 홈페이지 가기">롯데그룹</a><span>|</span></li>
+            </ul>
+
+            <ul class = "SNS">
+                <li class="facebook"><a href="https://www.facebook.com/lotte" target="_blank" title="롯데그룹 사회공헌 페이스북 가기">페이스북</a><span>|</span></li>
+				<li class="blog"><a href="http://blog.lotte.co.kr/" target="_blank" title="롯데그룹 사회공헌 블로그 가기">blog</a><span>|</span></li>
+				<li class="youtube"><a href="https://www.youtube.com/user/LOTTELIVE" target="_blank" title="롯데그룹 사회공헌 유투브 가기">youtube</a><span>|</span></li>
+            </ul>
+        </div>
+    </div>
     
+    <nav id = "menu">
+        <ul class = "main">
+            <li><a href = "#">소개</a>
+                <ul class = "sub">
+                    <li><a href = "#">프로그램 개요</a></li>
+                    <li><a href = "#">비전</a></li>
+                </ul>
+            </li>
+            <li><a href = "#">프로그램</a>
+                <ul class = "sub">
+                    <li><a href = "{% url 'program' %}">프로그램 신청</a></li>
+                    <li><a href = "{% url 'class_page' %}">클래스</a></li>
+                </ul>
+            </li>
+            <li><a href = "#">활동내용</a>
+                <ul class = "sub">
+                    <li><a href = "{% url 'supporters' %}">서포터즈 신청</a></li>
+                    <li><a href = "{% url 'supporter_page' %}">팀별 활동내용</a></li>
+                    <li><a href = "#">활동후기</a></li>
+                </ul>
+            </li>
+            <li><a href = "#">커뮤니티</a>
+                <ul class = "sub">
+                    <li><a href = "{% url 'notice_page' %}">공지사항</a></li>
+                    <li><a href = "#">FAQ</a></li>
+                    <li><a href = "#">1:1 문의</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+</header>
+
 <body>
     <article class="main_text_three">
 
@@ -93,7 +145,7 @@
         </div>
 
         <div class="main_text_five">
-            <div class="main_text_six"><a href = "http://www.naver.com"><img src="./클래스 웹페이지_files/dbqudgns.png" alt=""></a></div>
+            <div class="main_text_six"><a href = "http://www.naver.com"><img src="/static/img/dbqudgns.png" alt=""></a></div>
             <div class="main_text_seven">
                 <p>프로그램 1</p>
                 <p>접수 : 2020. 01. 01 ~ 2020 01. 31</p>
@@ -102,7 +154,7 @@
         </div>
 
         <div class="main_text_eight">
-            <div class="main_text_nine"><a href = "http://www.naver.com"><img src="./클래스 웹페이지_files/다운로드 (1).png" alt=""></a></div>
+            <div class="main_text_nine"><a href = "http://www.naver.com"><img src="/static/img/다운로드 (1).png" alt=""></a></div>
             <div class="main_text_ten">
                 <p>프로그램 2</p>
                 <p>접수 : 2020. 02. 01 ~ 2020 2. 28</p>
@@ -110,7 +162,7 @@
         </div>
 
         <div class="main_text_five">
-            <div class="main_text_six"><a href = "http://www.naver.com"><img src="./클래스 웹페이지_files/다운로드.png" alt=""></a></div>
+            <div class="main_text_six"><a href = "http://www.naver.com"><img src="/static/img/다운로드.png" alt=""></a></div>
             <div class="main_text_seven">
                 <p>포르그램 3</p>
                 <p>접수 : 2020. 03. 01 ~ 2020 03. 30</p>
@@ -119,7 +171,7 @@
         </div>
 
         <div class="main_text_eight">
-            <div class="main_text_nine"><a href = "http://www.naver.com"><img src="./클래스 웹페이지_files/unnamed.png" alt=""></a></div>
+            <div class="main_text_nine"><a href = "http://www.naver.com"><img src="/static/img/unnamed.png" alt=""></a></div>
             <div class="main_text_ten">
                 <p>프로그램 4</p>
                 <p>접수 : 2020. 04. 01 ~ 2020 04. 31</p>
@@ -139,4 +191,10 @@
    
      
 </body>
+
+<footer>
+    <br><br><br><br>
+    <h2 class="container">Lotte Project</h2><br><br>
+    <li>Copyright ⓒ 2020 조선대학교 멋쟁이 사자처럼 8기 해커톤 프로젝트</li>
+</footer>
 </html>
