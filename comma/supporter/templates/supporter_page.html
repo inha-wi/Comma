@@ -11,11 +11,11 @@
     <header>
         <div>
             <h2 class = "header_logo"><a href = "{% url 'main' %}" title = "홈페이지 메인으로 가기"><img src = "/static/img/lottelogo.jpg" alt = ""></a></h2>
-        <div>
-            <ul class = "friendShip">
-                <li><a href = "{% url 'notice_page' %}" title = "공지사항 페이지 가기">공지사항</a><span>|</span></li>
-                <li><a href = "https://www.lotte.co.kr/main.do" target = "_blank" title = "롯데그룹 홈페이지 가기">롯데그룹</a><span>|</span></li>
-            </ul>
+            <div>
+                <ul class = "friendShip">
+                    <li><a href = "{% url 'notice_page' %}" title = "공지사항 페이지 가기">공지사항</a><span>|</span></li>
+                    <li><a href = "https://www.lotte.co.kr/main.do" target = "_blank" title = "롯데그룹 홈페이지 가기">롯데그룹</a><span>|</span></li>
+                </ul>
     
                 <ul class = "SNS">
                     <li class="facebook"><a href="https://www.facebook.com/lotte" target="_blank" title="롯데그룹 사회공헌 페이스북 가기">페이스북</a><span>|</span></li>
@@ -35,13 +35,13 @@
                 </li>
                 <li><a href = "#">프로그램</a>
                     <ul class = "sub">
-                        <li><a href = "{% url 'program' %}">프로그램 신청</a></li>
+                        <li><a href = "{% url 'program_form' %}">프로그램 신청</a></li>
                         <li><a href = "{% url 'class_page' %}">클래스</a></li>
                     </ul>
                 </li>
                 <li><a href = "#">활동내용</a>
                     <ul class = "sub">
-                        <li><a href = "{% url 'supporters' %}">서포터즈 신청</a></li>
+                        <li><a href = "{% url 'supporters_form' %}">서포터즈 신청</a></li>
                         <li><a href = "{% url 'supporter_page' %}">팀별 활동내용</a></li>
                         <li><a href = "#">활동후기</a></li>
                     </ul>

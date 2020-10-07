@@ -5,10 +5,6 @@
     padding : 0;
 }
 
-body {
-    font : 20px 'Nanum Gothic', sans-serif;
-}
-
 a{
     text-decoration : none;
     color : #404040;
@@ -23,7 +19,8 @@ span {
 }
 
 Header {
-    height : 100px;
+    font : 20px 'Nanum Gothic', sans-serif;
+    height : 140px;
     background-color : white;
     border : 1px solid white;
     position : relative;
@@ -36,7 +33,7 @@ Header {
     width : auto; height : auto;
     line-height : 100px;
     float : left;
-    padding : 0px 100px;
+    padding : 20px 140px;
 }
 
 .friendShip{
@@ -126,10 +123,10 @@ Header {
 }
 
 footer{
+    font : 20px 'Nanum Gothic', sans-serif;
     height : 250px;
     background-color : rgb(77, 74, 74);
     color : white;
-    font-size : 15px;
     border : 1px solid rgb(77, 74, 74);
     position : relative;
     width : 100%;

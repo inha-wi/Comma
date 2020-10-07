@@ -30,6 +30,8 @@ urlpatterns = [
     path('supporters/', notice.views.supporters, name="supporters"),
     path('supporter_page/', supporter.views.supporter_page, name="supporter_page"),
     path('class_page/', program.views.class_page, name="class_page"),
+    path('program_form/', program.views.program_form, name="program_form"),
+    path('supporters_form/', supporter.views.supporters_form, name="supporters_form"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

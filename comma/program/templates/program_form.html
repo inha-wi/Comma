@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,58 +16,54 @@
     <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
     <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="/static/css/bootstrap_program.css">
+    <link rel="stylesheet" href="/static/css/main_style.css">
     <link rel="stylesheet" href="/static/css/program_style.css">
     
 
 </head>
 <header>
-
     <div>
-        <h2 class="header_logo"><a href="comma\likelion\templates\main.html" title="홈페이지 메인으로 가기"><img src="#"
-                    alt=""></a>로고이름</h2>
+        <h2 class = "header_logo"><a href = "{% url 'main' %}" title = "홈페이지 메인으로 가기"><img src = "/static/img/lottelogo.jpg" alt = ""></a></h2>
         <div>
-            <ul class="friendShip">
-                <li><a href="#" title="공지사항 페이지 가기">공지사항</a><span>|</span></li>
-                <li><a href="#" target="_blank" title="롯데그룹 홈페이지 가기">롯데그룹</a><span>|</span></li>
+            <ul class = "friendShip">
+                <li><a href = "{% url 'notice_page' %}" title = "공지사항 페이지 가기">공지사항</a><span>|</span></li>
+                <li><a href = "https://www.lotte.co.kr/main.do" target = "_blank" title = "롯데그룹 홈페이지 가기">롯데그룹</a><span>|</span></li>
             </ul>
 
-            <ul class="SNS">
-                <li class="facebook"><a href="https://www.facebook.com/lotte" target="_blank"
-                        title="롯데그룹 사회공헌 페이스북 가기">페이스북</a><span>|</span></li>
-                <li class="blog"><a href="http://blog.lotte.co.kr/" target="_blank"
-                        title="롯데그룹 사회공헌 블로그 가기">blog</a><span>|</span></li>
-                <li class="youtube"><a href="https://www.youtube.com/user/LOTTELIVE" target="_blank"
-                        title="롯데그룹 사회공헌 유투브 가기">youtube</a><span>|</span></li>
+            <ul class = "SNS">
+                <li class="facebook"><a href="https://www.facebook.com/lotte" target="_blank" title="롯데그룹 사회공헌 페이스북 가기">페이스북</a><span>|</span></li>
+				<li class="blog"><a href="http://blog.lotte.co.kr/" target="_blank" title="롯데그룹 사회공헌 블로그 가기">blog</a><span>|</span></li>
+				<li class="youtube"><a href="https://www.youtube.com/user/LOTTELIVE" target="_blank" title="롯데그룹 사회공헌 유투브 가기">youtube</a><span>|</span></li>
             </ul>
         </div>
     </div>
-
-    <nav id="menu">
-        <ul class="main">
-            <li><a href="#">소개</a>
-                <ul class="sub">
-                    <li><a href="#">프로그램 개요</a></li>
-                    <li><a href="#">비전</a></li>
+    
+    <nav id = "menu">
+        <ul class = "main">
+            <li><a href = "#">소개</a>
+                <ul class = "sub">
+                    <li><a href = "#">프로그램 개요</a></li>
+                    <li><a href = "#">비전</a></li>
                 </ul>
             </li>
-            <li><a href="#">프로그램</a>
-                <ul class="sub">
-                    <li><a href="comma\notice\templates\program.html">프로그램 신청</a></li>
-                    <li><a href="#">클래스</a></li>
+            <li><a href = "#">프로그램</a>
+                <ul class = "sub">
+                    <li><a href = "{% url 'program_form' %}">프로그램 신청</a></li>
+                    <li><a href = "{% url 'class_page' %}">클래스</a></li>
                 </ul>
             </li>
-            <li><a href="#">활동내용</a>
-                <ul class="sub">
-                    <li><a href="comma\notice\templates\supporters.html">서포터즈 신청</a></li>
-                    <li><a href="#">팀별 활동내용</a></li>
-                    <li><a href="#">활동후기</a></li>
+            <li><a href = "#">활동내용</a>
+                <ul class = "sub">
+                    <li><a href = "{% url 'supporters_form' %}">서포터즈 신청</a></li>
+                    <li><a href = "{% url 'supporter_page' %}">팀별 활동내용</a></li>
+                    <li><a href = "#">활동후기</a></li>
                 </ul>
             </li>
-            <li><a href="#">커뮤니티</a>
-                <ul class="sub">
-                    <li><a href="comma\notice\templates\notice.html}">공지사항</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">1:1 문의</a></li>
+            <li><a href = "#">커뮤니티</a>
+                <ul class = "sub">
+                    <li><a href = "{% url 'notice_page' %}">공지사항</a></li>
+                    <li><a href = "#">FAQ</a></li>
+                    <li><a href = "#">1:1 문의</a></li>
                 </ul>
             </li>
         </ul>
