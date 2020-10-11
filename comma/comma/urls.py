@@ -36,6 +36,7 @@ urlpatterns = [
     path('supporters_form/', supporter.views.supporters_form, name="supporters_form"),
     path('index/', introduce.views.index, name="index"),
     path('vision/', introduce.views.vision, name='vision'),
+    path('class_detail/', program.views.class_detail, name="class_detail"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

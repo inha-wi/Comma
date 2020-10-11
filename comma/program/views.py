@@ -6,3 +6,6 @@ def class_page(request):
 
 def program_form(request):
     return render(request, 'program_form.html')
+
+def class_detail(request):
+    return render(request, 'class_detail.html')

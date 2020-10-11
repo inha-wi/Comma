@@ -1,0 +1,92 @@
+.contents {
+    /* min-height: 400px; */
+    padding-bottom: 200px;
+    min-height: 400px; 
+    
+
+    
+}
+
+
+.class_contents {
+    width: 1000px;
+    margin: 0px 255px;
+    
+    text-align: center;
+}
+
+
+
+
+
+.text{
+    color: #e80b69;
+    font-size: 25px;
+    margin-top: 0px;
+    padding-top : 0px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+
+    
+    
+   
+}
+
+.text_two {
+    font-size : 40px;
+    
+    
+    margin-top : 7px;
+    margin-bottom : 7px;
+}
+
+.text_three { 
+    font-size : 18px;
+    
+}
+.i_text {
+    display: inline-block;
+    width: 14px;
+    height: 18px;
+    vertical-align: -2px;
+    background: url(../images/program/icon_location.png) no-repeat;
+    margin-right: 10px;
+}
+
+.box_img {
+    float : left;
+    
+    padding-bottom : 40px;
+    padding-top : 40px;
+    padding-left : 10px;
+   
+    
+}
+.box_txt {
+    height: 400px;
+    border: 1px solid #c7c7c7;
+    border-left: 0;
+    padding: 40px;
+    padding-left: 460px;
+    
+}
+
+.box_txt_top {
+    
+    margin-bottom : 50px;
+}
+
+.text_pink {
+    color : red;
+}
+
+.box_box {
+    
+    padding-right : 40px;
+
+}
+
+
+    
+
+
