@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'notice.apps.NoticeConfig',
     'supporter.apps.SupporterConfig',
     'program.apps.ProgramConfig',
+    'introduce.apps.IntroduceConfig',
 ]
 
 MIDDLEWARE = [

@@ -21,6 +21,7 @@ import likelion.views
 import notice.views
 import program.views
 import supporter.views
+import introduce.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,6 +33,8 @@ urlpatterns = [
     path('class_page/', program.views.class_page, name="class_page"),
     path('program_form/', program.views.program_form, name="program_form"),
     path('supporters_form/', supporter.views.supporters_form, name="supporters_form"),
+    path('index/', introduce.views.index, name="index"),
+    path('vision/', introduce.views.vision, name='vision'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

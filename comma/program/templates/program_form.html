@@ -57,8 +57,8 @@
         <ul class="main">
             <li><a href="#">소개</a>
                 <ul class="sub">
-                    <li><a href="#">프로그램 개요</a></li>
-                    <li><a href="#">비전</a></li>
+                    <li><a href = "{% url 'index' %}">프로그램 개요</a></li>
+                    <li><a href = "{% url 'vision' %}">비전</a></li>
                 </ul>
             </li>
             <li><a href="#">프로그램</a>
@@ -88,6 +88,9 @@
 
 <br><br>
 <body>
+
+    
+
     <div class="container contact">
         <div class="row">
             <div class="col-md-3" id="side">
