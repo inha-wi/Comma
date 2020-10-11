@@ -29,8 +29,8 @@
             <ul class = "main">
                 <li><a href = "#">소개</a>
                     <ul class = "sub">
-                    <li><a href = "{% url 'index' %}">프로그램 개요</a></li>
-                    <li><a href = "{% url 'vision' %}">비전</a></li>
+                        <li><a href = "{% url 'index' %}">프로그램 개요</a></li>
+                        <li><a href = "{% url 'vision' %}">비전</a></li>
                     </ul>
                 </li>
                 <li><a href = "#">프로그램</a>
@@ -49,74 +49,163 @@
                 <li><a href = "#">커뮤니티</a>
                     <ul class = "sub">
                         <li><a href = "{% url 'notice_page' %}">공지사항</a></li>
-                        <li><a href="{% url 'inquiry' %}">1:1 문의</a></li>
+                        <li><a href = "{% url 'inquiry' %}">1:1 문의</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
     
     </header>
+    
+</header>
 
 <body>
 
-    <div class = "imgcollage1">
+    <article class="main_bar">
+
+        <select class="main_contents1">
+    
+          <option value="">지역</option>
+                            
+            <option value="LOC02">남서울</option>
+    
+            <option value="LOC03">북서울</option>
+    
+            <option value="LOC04">부산</option>
+    
+            <option value="LOC05">대구</option>
+    
+            <option value="LOC06">인천</option>
+    
+            <option value="LOC07">경기</option>
+    
+            <option value="LOC13">전남</option>
+    
+            <option value="LOC09">충남</option>
+    
+            <option value="LOC11">경남</option>
+    
+            <option value="LOC08">강원</option>
+    
+            <option value="LOC10">충북</option>
+    
+            <option value="LOC14">전북</option>
+    
+            <option value="LOC12">경북</option>
+    
+            <option value="LOC15">제주</option>
+    
+        </select>
+    
+        <select class="main_contents2">
+    
+            <option value="">활동</option>
+                              
+              <option value="LOC02">문화생활</option>
+      
+              <option value="LOC03">봉사활동</option>
+
+              <option value="LOC04">서포터즈</option>
+      
+        </select>
+    
+        <select class="main_contents3">
+    
+            <option value="">기간</option>
+                              
+              <option value="LOC02">1월</option>
+      
+              <option value="LOC03">2월</option>
+      
+              <option value="LOC04">3월</option>
+      
+              <option value="LOC05">4월</option>
+      
+              <option value="LOC06">5월</option>
+      
+              <option value="LOC07">6월</option>
+      
+              <option value="LOC13">7월</option>
+      
+              <option value="LOC09">8월</option>
+      
+              <option value="LOC11">9월</option>
+      
+              <option value="LOC08">10월</option>
+      
+              <option value="LOC10">11월</option>
+      
+              <option value="LOC14">12월</option>
+      
+        </select>
+
+       
+        <div class="main_contents4">
+            <input type="text" placeholder="프로그램을 입력하세요." style="width:300px; height:50px; padding-left: 10px; font-size: 100%;">
+            <button style="width:50px; height:55px;">검색</button>
+        </div>
+
+
+     <div class = "imgcollage1">
         <div class = "picture1"><img src="/static/img/1.png" alt =""></div>
         <div class = "text1">
             <p>프로그램 1</p>
             
         </div>
-
     </div>
 
 
-    <div class = "imgcollage2">
+      <div class = "imgcollage2">
         <div class = "picture2"><img src="/static/img/2.png" alt =""></div>
         <div class = "text2">
             <p>프로그램 2</p>
         </div>
-    </div>
+      </div>
 
 
-    <div class = "imgcollage3">
+      <div class = "imgcollage3">
         <div class = "picture3"><img src="/static/img/3.png" alt =""></div>
         <div class = "text3">
             <p>포르그램 3</p>
         </div>
 
-    </div>
+      </div>
 
 
-    <div class = "imgcollage4">
+      <div class = "imgcollage4">
         <div class = "picture4"><img src="/static/img/4.png" alt =""></div>
         <div class = "text4">
             <p>프로그램 4</p>
         </div>
-    </div>
+      </div>
 
 
-    <div class = "imgcollage5">
+      <div class = "imgcollage5">
         <div class = "picture5"><img src="/static/img/5.png" alt =""></div>
         <div class = "text5">
             <p>프로그램 5</p>
         </div>
-    </div>
+      </div>
 
 
-    <div class = "imgcollage6">
+     <div class = "imgcollage6">
         <div class = "picture6"><img src="/static/img/6.jpg" alt =""></div>
         <div class = "text6">
             <p>프로그램 6</p>
         </div>
-    </div>
+     </div>
 
-    <div class="paging">
+        <div class="paging">
             <a class="select" href="#">1</a>
             <a href="#">2</a>
             <a href="#">3</a>
             <a href="#">4</a>
             <a href="#">5</a>
         </div>
-    </body>
+
+    </article>
+</body>
+
 
     <footer>
         <br><br><br><br>
@@ -125,7 +214,3 @@
     </footer>
     
 </html>
-
-
-
-

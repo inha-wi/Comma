@@ -1,128 +1,129 @@
 
 .imgcollage1{
 	width: 20%;
-	margin: 300px 0px 0px 280px;
+	margin: 80px 0px 0px 420px;
 	display: inline-block;
-}
-.picture1 img{
+ }
+ .picture1 img{
 	width: 100%;
 	height: 250px;
-}
-.text1{
+ }
+ .text1{
 	padding: 5px 10px 10px 10px;
 	background-color: white;
 	text-align: center;
 	font-size: 25px;
-}
-/*----------------------------------------*/
-.imgcollage2{
+ }
+ /*----------------------------------------*/
+ .imgcollage2{
 	width: 20%;
-	margin: 300px 0px 0px 100px;
+	margin: 80px 0px 0px 50px;
 	display: inline-block;
-}
-.picture2 img{
+ }
+ .picture2 img{
 	width: 100%;
 	height: 250px;
-}
-.text2{
+ }
+ .text2{
 	padding: 5px 10px 10px 10px;
 	background-color: white;
 	text-align: center;
 	font-size: 25px;
-}
-
-/*----------------------------------------*/
-.imgcollage3{
+ }
+ 
+ /*----------------------------------------*/
+ .imgcollage3{
 	width: 20%;
-	margin: 10px 0px 0px 100px;
+	margin: 80px 0px 0px 50px;
 	display: inline-block;
-}
-
-.picture3 img{
+ }
+ 
+ .picture3 img{
 	width: 100%;
 	height: 250px;
-}
-
-.text3{
+ }
+ 
+ .text3{
 	padding: 5px 10px 10px 10px;
 	background-color: white;
 	text-align: center;
 	font-size: 25px;
-}
-
-/*----------------------------------------*/
-
-.imgcollage4{
+ }
+ 
+ /*----------------------------------------*/
+ 
+ .imgcollage4{
 	width: 20%;
-	margin: 1px 0px 0px 280px;
+	margin: 20px 0px 50px 420px;
 	display: inline-block;
-}
-
-.picture4 img{
+ }
+ 
+ .picture4 img{
 	width: 100%;
 	height: 250px;
-}
-
-.text4{
+ }
+ 
+ .text4{
 	padding: 5px 10px 10px 10px;
 	background-color: white;
 	text-align: center;
 	font-size: 25px;
-}
-/*----------------------------------------*/
-
-.imgcollage5{
+ }
+ /*----------------------------------------*/
+ 
+ .imgcollage5{
 	width: 20%;
-	margin: 1px 0px 0px 100px;
+	margin: 20px 0px 50px 50px;
 	display: inline-block;
-}
-
-.picture5 img{
+ }
+ 
+ .picture5 img{
 	width: 100%;
 	height: 250px;
-}
-
-.text5{
+ }
+ 
+ .text5{
 	padding: 5px 10px 10px 10px;
 	background-color: white;
 	text-align: center;
 	font-size: 25px;
-}
-
-/*----------------------------------------*/
-
-.imgcollage6{
+ }
+ 
+ /*----------------------------------------*/
+ 
+ .imgcollage6{
 	width: 20%;
-	margin: 1px 0px 0px 100px;
+	margin: 20px 0px 50px 50px;
 	display: inline-block;
-}
-
-.picture6 img{
+ }
+ 
+ .picture6 img{
 	width: 100%;
 	height: 250px;
-}
-
-.text6{
+ }
+ 
+ .text6{
 	padding: 5px 10px 10px 10px;
 	background-color: white;
 	text-align: center;
 	font-size: 25px;
-}
-
-/*-------------페이징 바 설정------------------------*/
-
-.paging {
-	text-align: center;
-}
-
-body{
+ }
+ 
+ /*-------------페이징 바 설정------------------------*/
+ 
+ .paging {
+	margin: 20px 0px 0px 970px;
+	display: inline-block;
+ }
+ 
+ body{
 	position: relative;
 	/* width: 100% */
 	left: 0;
 	right: 0;
-}
-
-.paging a {
+ }
+ 
+ .paging a {
 	/*
 	display: inline-block 인라인 요소의 특징과 블록 요소의 특징을 모두 갖는다
 	크기를 가질 수 있으며 텍스트 정렬도 적용받는다
@@ -136,9 +137,52 @@ body{
 	color: #000;
 	background-color: #F5F5DC;
 	
-}
-/* 현재 페이징에 select 클래스를 적용한다*/
-.paging a.select {
+ }
+ /* 현재 페이징에 select 클래스를 적용한다*/
+ .paging a.select {
 	color: #fff;
 	background-color: #FFA7A7;
-}
+ }
+ 
+ /* ---------------- 검색 바 ---------------------*/
+ 
+ body {
+	margin : 0px
+   }
+ 
+ 
+   .main_contents1 {
+	color : black;
+	font-size : 100%;
+	width : 250px;
+	height : 55px;
+	padding-left: 10px;
+	margin : 50px 0px 0px 470px ;
+   
+   }
+   
+   .main_contents2 {
+	color : black;
+	font-size : 100%;
+	width : 250px;
+	height : 55px;
+	padding-left: 10px;
+	margin : 0px 0px 0px 0px;
+   }
+   
+   .main_contents3 {
+	color : black;
+	font-size : 100%;
+	width : 150px;
+	height : 55px;
+	padding-left: 10px;
+	margin : 0px 0px 0px 0px;
+   
+   }
+   
+   .main_contents4 {
+	display:inline-block;
+	margin : 0px 0px 0px 20px;
+   }
+   
+   

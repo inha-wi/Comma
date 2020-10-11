@@ -36,35 +36,37 @@
         </div>
     </div>
 
-    <nav id="menu">
-        <ul class="main">
-            <li><a href="#">소개</a>
-                <ul class="sub">
-                    <li><a href="#">프로그램 개요</a></li>
-                    <li><a href="#">비전</a></li>
+    <nav id = "menu">
+        <ul class = "main">
+            <li><a href = "#">소개</a>
+                <ul class = "sub">
+                    <li><a href = "{% url 'index' %}">프로그램 개요</a></li>
+                    <li><a href = "{% url 'vision' %}">비전</a></li>
                 </ul>
             </li>
-            <li><a href="#">프로그램</a>
-                <ul class="sub">
-                    <li><a href="{% url 'program_form' %}">프로그램 신청</a></li>
-                    <li><a href="{% url 'class_page' %}">클래스</a></li>
+            <li><a href = "#">프로그램</a>
+                <ul class = "sub">
+                    <li><a href = "{% url 'program_form' %}">프로그램 신청</a></li>
+                    <li><a href = "{% url 'class_page' %}">클래스</a></li>
                 </ul>
             </li>
-            <li><a href="#">활동내용</a>
-                <ul class="sub">
-                    <li><a href="{% url 'supporters_form' %}">서포터즈 신청</a></li>
-                    <li><a href="{% url 'supporter_page' %}">팀별 활동내용</a></li>
-                    <li><a href="#">활동후기</a></li>
+            <li><a href = "#">활동내용</a>
+                <ul class = "sub">
+                    <li><a href = "{% url 'supporters_form' %}">서포터즈 신청</a></li>
+                    <li><a href = "{% url 'supporter_page' %}">팀별 활동내용</a></li>
+                    <li><a href = "#">활동후기</a></li>
                 </ul>
             </li>
-            <li><a href="#">커뮤니티</a>
-                <ul class="sub">
-                    <li><a href="{% url 'notice_page' %}">공지사항</a></li>
-                    <li><a href="{% url 'inquiry' %">1:1 문의</a></li>
+            <li><a href = "#">커뮤니티</a>
+                <ul class = "sub">
+                    <li><a href = "{% url 'notice_page' %}">공지사항</a></li>
+                    <li><a href = "{% url 'inquiry' %}">1:1 문의</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
+
+</header>
 
 </header>
 
