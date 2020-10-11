@@ -28,6 +28,7 @@ urlpatterns = [
     path('', likelion.views.main, name="main"),
     path('program/', notice.views.program, name="program"),
     path('notice_page/', notice.views.notice_page, name="notice_page"),   
+    path('inquiry/', notice.views.inquiry, name="inquiry"),
     path('supporters/', notice.views.supporters, name="supporters"),
     path('supporter_page/', supporter.views.supporter_page, name="supporter_page"),
     path('class_page/', program.views.class_page, name="class_page"),

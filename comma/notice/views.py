@@ -4,6 +4,9 @@ from django.shortcuts import render
 def notice_page(request):
     return render(request, 'notice_page.html')
 
+def inquiry(request):
+    return render(request, 'inquiry.html')
+
 def program(request):
     return render(request, 'program.html')
 

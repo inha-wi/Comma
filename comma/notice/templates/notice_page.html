@@ -1,118 +1,66 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-type" content="text/html; charset-euc-kr"/>
-  {% load static %}
-  <link rel="stylesheet" href= "{% static 'css/main_style.css' %}">
-  <title>공지사항</title>
-  <style type="text/css">
-  
-    .notice{
-        position : relative;
-        text-align : center;
-        background-color : pink;
-    }
-  
-  .notice_header{
-      text-align : center;
-  }
 
-    .notice_link{
-        text-decoration:none;
-        color:#09f;
-}
-    .notice_link:hover{
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-type" content="text/html; charset-euc-kr" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/main_style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/notice_page_style.css' %}">
+    <title>공지사항</title>
+</head>
 
-        text-decoration:underline;
-}
-    caption{
-        display:none; /*안보이게 설정, 
-                              화면에 보이지는 않지만 스크린리더리로 읽어짐.*/
-        
-    }
-
-    table{
-        width: 1200px;
-        border-collapse:collapse;
-        border-top:2px solid #8d8d8d;
-}
-
-    th{
-        padding:10px 8px; /*padding: vertical horizontal;*/
-        background:#f9f9f9;
-        color:#666;
-        border-bottom:1px solid #8d8d8d;
-    }
-    
-    td{
-        padding:10px 8px; /*padding: vertical horizontal;*/
-        text-align:center;
-        line-height:1.25em;
-        color:#666;
-        border-bottom:1px solid #8d8d8d;
-    }
-
-    td.article{ /*article 클래스가 적용된 열만 좌측 정렬*/
-        text-align:left;
-    }
-
-    
-
-  </style>
-
-  <!--
-        <table width="400" height="300" bgcolor="#ffcc99"
-        border="1" bordercolor="#ffffff" cellpadding="10" cellspacing="0" align="center"
-        background="images/barossa_valley.jpg">       
-  -->
-
- </head>
-
- <header>
+<header>
     <div>
-        <h2 class = "header_logo"><a href = "{% url 'main' %}" title = "홈페이지 메인으로 가기"><img src = "/static/img/lottelogo.jpg" alt = ""></a></h2>
+        <h2 class="header_logo"><a href="{% url 'main' %}" title="홈페이지 메인으로 가기"><img src="/static/img/lottelogo.jpg"
+                    alt=""></a></h2>
         <div>
-            <ul class = "friendShip">
-                <li><a href = "{% url 'notice_page' %}" title = "공지사항 페이지 가기">공지사항</a><span>|</span></li>
-                <li><a href = "https://www.lotte.co.kr/main.do" target = "_blank" title = "롯데그룹 홈페이지 가기">롯데그룹</a><span>|</span></li>
+            <ul class="friendShip">
+                <li><a href="{% url 'notice_page' %}" title="공지사항 페이지 가기">공지사항</a><span>|</span></li>
+                <li><a href="https://www.lotte.co.kr/main.do" target="_blank"
+                        title="롯데그룹 홈페이지 가기">롯데그룹</a><span>|</span></li>
             </ul>
 
-            <ul class = "SNS">
-                <li class="facebook"><a href="https://www.facebook.com/lotte" target="_blank" title="롯데그룹 사회공헌 페이스북 가기">페이스북</a><span>|</span></li>
-				<li class="blog"><a href="http://blog.lotte.co.kr/" target="_blank" title="롯데그룹 사회공헌 블로그 가기">blog</a><span>|</span></li>
-				<li class="youtube"><a href="https://www.youtube.com/user/LOTTELIVE" target="_blank" title="롯데그룹 사회공헌 유투브 가기">youtube</a><span>|</span></li>
+            <ul class="SNS">
+                <li class="facebook"><a href="https://www.facebook.com/lotte" target="_blank"
+                        title="롯데그룹 사회공헌 페이스북 가기">페이스북</a><span>|</span></li>
+                <li class="blog"><a href="http://blog.lotte.co.kr/" target="_blank"
+                        title="롯데그룹 사회공헌 블로그 가기">blog</a><span>|</span></li>
+                <li class="youtube"><a href="https://www.youtube.com/user/LOTTELIVE" target="_blank"
+                        title="롯데그룹 사회공헌 유투브 가기">youtube</a><span>|</span></li>
             </ul>
         </div>
     </div>
-    
-    <nav id = "menu">
-        <ul class = "main">
-            <li><a href = "#">소개</a>
-                <ul class = "sub">
-                    <li><a href = "{% url 'index' %}">프로그램 개요</a></li>
-                    <li><a href = "{% url 'vision' %}">비전</a></li>
+
+    <nav id="menu">
+        <ul class="main">
+            <li><a href="#">소개</a>
+                <ul class="sub">
+                    <li><a href="#">프로그램 개요</a></li>
+                    <li><a href="#">비전</a></li>
                 </ul>
             </li>
-            <li><a href = "#">프로그램</a>
-                <ul class = "sub">
-                    <li><a href = "{% url 'program_form' %}">프로그램 신청</a></li>
-                    <li><a href = "{% url 'class_page' %}">클래스</a></li>
+            <li><a href="#">프로그램</a>
+                <ul class="sub">
+                    <li><a href="{% url 'program_form' %}">프로그램 신청</a></li>
+                    <li><a href="{% url 'class_page' %}">클래스</a></li>
                 </ul>
             </li>
-            <li><a href = "#">활동내용</a>
-                <ul class = "sub">
-                    <li><a href = "{% url 'supporters_form' %}">서포터즈 신청</a></li>
-                    <li><a href = "{% url 'supporter_page' %}">팀별 활동내용</a></li>
-                    <li><a href = "#">활동후기</a></li>
+            <li><a href="#">활동내용</a>
+                <ul class="sub">
+                    <li><a href="{% url 'supporters_form' %}">서포터즈 신청</a></li>
+                    <li><a href="{% url 'supporter_page' %}">팀별 활동내용</a></li>
+                    <li><a href="#">활동후기</a></li>
                 </ul>
             </li>
-            <li><a href = "#">커뮤니티</a>
-                <ul class = "sub">
-                    <li><a href = "{% url 'notice_page' %}">공지사항</a></li>
-                    <li><a href = "#">FAQ</a></li>
-                    <li><a href = "#">1:1 문의</a></li>
+            <li><a href="#">커뮤니티</a>
+                <ul class="sub">
+                    <li><a href="{% url 'notice_page' %}">공지사항</a></li>
+                    <li><a href="{% url 'inquiry' %">1:1 문의</a></li>
                 </ul>
             </li>
         </ul>
@@ -120,72 +68,122 @@
 
 </header>
 
- <body>
-    <div class="notice">
-        <h2 class="notice_header">공지사항</h2>
+<body>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="py-3 text-center font-bold font-up black-text">공지사항</h2>
+                </div>
+            </div>
+
+            <table class="table table-hover mb-0">
+                <thead>
+                    <tr>
+                        <th scope="row">#</th>
+                        <th class="th-lg"><a>제목</a></th>
+                        <th class="th-lg"><a href="">작성자</a></th>
+                        <th class="th-lg"><a href="">작성일</a></th>
+                        <th class="th-lg"><a href="">조회수</a></th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>비대면 연장 안내</td>
+                        <td>이순신</td>
+                        <td>2020-10-1</td>
+                        <td>56</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>휴무일 안내</td>
+                        <td>김미영</td>
+                        <td>2020-10-2</td>
+                        <td>54</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>휴무일 안내</td>
+                        <td>김미미</td>
+                        <td>2020-10-3</td>
+                        <td>78</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>코로나19로 인한 공지사항</td>
+                        <td>김영희</td>
+                        <td>2020-10-4</td>
+                        <td>35</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>결제 시 주의사항</td>
+                        <td>김철수</td>
+                        <td>2020-10-5</td>
+                        <td>31</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>신청 시 준비사항</td>
+                        <td>홍길동</td>
+                        <td>2020-10-6</td>
+                        <td>38</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>유지보수 비용안내</td>
+                        <td>도레미</td>
+                        <td>2020-10-11</td>
+                        <td>83</td>
+                    </tr>
+                </tbody>
+                
+            </table>
+       
+            <div class="d-flex justify-content-center">
+               
+                <nav class="my-4 pt-2">
+                    <ul class="pagination pagination-circle pg-red mb-0">
+                        
+                        <li class="page-item disabled clearfix d-none d-md-block"><a class="page-link">First</a></li>
+                        <!--Arrow left-->
+                        <li class="page-item disabled">
+                            <a class="page-link" aria-label="Previous">
+                                    <span aria-hidden="true">«</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                        </li>
+                        <!--Numbers-->
+                        <li class="page-item active"><a class="page-link">1</a></li>
+                        <li class="page-item"><a class="page-link">2</a></li>
+                        <li class="page-item"><a class="page-link">3</a></li>
+                        <li class="page-item"><a class="page-link">4</a></li>
+                        <li class="page-item"><a class="page-link">5</a></li>
+                        <!--Arrow right-->
+                        <li class="page-item">
+                            <a class="page-link" aria-label="Next">
+                                    <span aria-hidden="true">»</span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                        </li>
+                        <!--First-->
+                        <li class="page-item clearfix d-none d-md-block"><a class="page-link">Last</a></li>
+                    </ul>
+                </nav>
+            </div>
+           
+        </div>
     </div>
+</body>
 
-
-    <div class="dataTbl1">
-    
-        <table summary="공지사항 목록입니다.">
-
-            <!--표의 제목-->
-            <caption>공지사항</caption>
-
-            <colgroup> 
-               <!--col태그는 표에서 하나 이상의 td태그에 대해 속성값을 정의-->
-               <!-- 여기서는 각 열의 크기를 지정-->
-                <col width="10%"/>
-                <col width="*"/>  <!--나머지 크기-->
-                <col width="14%"/>
-            </colgroup>
-
-            <!--테이블 머리말 부분-->
-            <thead>
-                <th scope="번호">번호</th> 
-                <th scope="제목">제목</th>
-                <th scope="등록일">등록일</th>
-
-            </thead>
-
-            <!--테이블 내용 부분-->
-            <tbody>
-                <tr>
-                    <td>33</td>
-                    <td class="article"><a href="#none" class = "notice_link">공지사항 내용</a></td>
-                    <td>2020-10-02</td>
-                </tr>
-                <tr>
-                    <td>32</td>
-                    <td class="article"><strong><a href="#none" class = "notice_link">공지사항 내용</a></strong></td>
-                    <td>2020-10-01</td>
-                </tr>
-                <tr>
-                    <td>31</td>
-                    <td class="article"><a href="#none" class = "notice_link">공지사항 내용</a></td>
-                    <td>2020-09-30</td>
-                </tr>
-                <tr>
-                    <td colspan="3">등록된 뉴스가 없습니다</td>
-                </tr>
-            </tbody>
-
-            <!--테이블 꼬리말-->
-            <tfoot>
-
-            </tfoot>
-        </table>
-
-    </div>
-  
-  
-  
-  </body>
-
-  <footer>
+<footer>
     <br><br><br><br>
     <h2 class="container">Lotte Project</h2><br><br>
     <li>Copyright ⓒ 2020 조선대학교 멋쟁이 사자처럼 8기 해커톤 프로젝트</li>
 </footer>
+
 </html>
