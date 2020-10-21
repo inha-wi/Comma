@@ -1,87 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>서포터즈 신청</title>
   {% load static %}
-  
+
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Gothic:wght@700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/main_style.css' %}">
-  <link rel="stylesheet" href="{% static '/static/css/supporters_style.css' %}">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
     integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <link rel="stylesheet" href="{% static 'css/supporters_style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main_style.css' %}">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
   <script type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+  <!-- <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" /> -->
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" />
 </head>
 
 <header>
   <div>
-      <h2 class = "header_logo"><a href = "{% url 'main' %}" title = "홈페이지 메인으로 가기"><img src = "/static/img/lottelogo.jpg" alt = ""></a></h2>
-      <div>
-          <ul class = "friendShip">
-              <li><a href = "{% url 'notice_page' %}" title = "공지사항 페이지 가기">공지사항</a><span>|</span></li>
-              <li><a href = "https://www.lotte.co.kr/main.do" target = "_blank" title = "롯데그룹 홈페이지 가기">롯데그룹</a><span>|</span></li>
-          </ul>
+    <h2 class="header_logo"><a href="{% url 'main' %}" title="홈페이지 메인으로 가기"><img src="/static/img/lottelogo.jpg"
+          alt=""></a></h2>
+    <div>
+      <ul class="friendShip">
+        <li><a href="{% url 'notice_page' %}" title="공지사항 페이지 가기">공지사항</a><span>|</span></li>
+        <li><a href="https://www.lotte.co.kr/main.do" target="_blank" title="롯데그룹 홈페이지 가기">롯데그룹</a><span>|</span></li>
+      </ul>
 
-          <ul class = "SNS">
-              <li class="facebook"><a href="https://www.facebook.com/lotte" target="_blank" title="롯데그룹 사회공헌 페이스북 가기">페이스북</a><span>|</span></li>
-      <li class="blog"><a href="http://blog.lotte.co.kr/" target="_blank" title="롯데그룹 사회공헌 블로그 가기">blog</a><span>|</span></li>
-      <li class="youtube"><a href="https://www.youtube.com/user/LOTTELIVE" target="_blank" title="롯데그룹 사회공헌 유투브 가기">youtube</a><span>|</span></li>
-          </ul>
-      </div>
+      <ul class="SNS">
+        <li class="facebook"><a href="https://www.facebook.com/lotte" target="_blank"
+            title="롯데그룹 사회공헌 페이스북 가기">페이스북</a><span>|</span></li>
+        <li class="blog"><a href="http://blog.lotte.co.kr/" target="_blank"
+            title="롯데그룹 사회공헌 블로그 가기">blog</a><span>|</span></li>
+        <li class="youtube"><a href="https://www.youtube.com/user/LOTTELIVE" target="_blank"
+            title="롯데그룹 사회공헌 유투브 가기">youtube</a><span>|</span></li>
+      </ul>
+    </div>
   </div>
-  
-  <nav id = "menu">
-    <ul class = "main">
-        <li><a href = "#">소개</a>
-            <ul class = "sub">
-                <li><a href = "{% url 'index' %}">프로그램 개요</a></li>
-                <li><a href = "{% url 'vision' %}">비전</a></li>
-            </ul>
-        </li>
-        <li><a href = "#">프로그램</a>
-            <ul class = "sub">
-                <li><a href = "{% url 'program_form' %}">프로그램 신청</a></li>
-                <li><a href = "{% url 'class_page' %}">클래스</a></li>
-            </ul>
-        </li>
-        <li><a href = "#">활동내용</a>
-            <ul class = "sub">
-                <li><a href = "{% url 'supporters_form' %}">서포터즈 신청</a></li>
-                <li><a href = "{% url 'supporter_page' %}">팀별 활동내용</a></li>
-                <li><a href = "#">활동후기</a></li>
-            </ul>
-        </li>
-        <li><a href = "#">커뮤니티</a>
-            <ul class = "sub">
-                <li><a href = "{% url 'notice_page' %}">공지사항</a></li>
-                <li><a href = "{% url 'inquiry' %}">1:1 문의</a></li>
-            </ul>
-        </li>
-    </ul>
-</nav>
 
-</header>
+  <nav id="menu">
+    <ul class="main">
+      <li><a href="#">소개</a>
+        <ul class="sub">
+          <li><a href="{% url 'index' %}">프로그램 개요</a></li>
+          <li><a href="{% url 'vision' %}">비전</a></li>
+        </ul>
+      </li>
+      <li><a href="#">프로그램</a>
+        <ul class="sub">
+          <li><a href="{% url 'program_form' %}">프로그램 신청</a></li>
+          <li><a href="{% url 'class_page' %}">클래스</a></li>
+        </ul>
+      </li>
+      <li><a href="#">활동내용</a>
+        <ul class="sub">
+          <li><a href="{% url 'supporters_form' %}">서포터즈 신청</a></li>
+          <li><a href="{% url 'supporter_page' %}">팀별 활동내용</a></li>
+          <li><a href="#">활동후기</a></li>
+        </ul>
+      </li>
+      <li><a href="#">커뮤니티</a>
+        <ul class="sub">
+          <li><a href="{% url 'notice_page' %}">공지사항</a></li>
+          <li><a href="{% url 'inquiry' %}">1:1 문의</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
 </header>
 
 <br><br>
+
 <body>
   <div class="container contact">
     <div class="row">
@@ -199,15 +198,17 @@
           <h5>3. 자기소개서</h5>
           <div class="form-group">
             <label class="control-label col-sm-2" for="comment">3-1.자기소개</label>
-            <textarea class="form-control" rows="5" id="comment"placeholder="자신의 장`단점, 특기, 성격, 좌우명 등 구체적으로 작성"></textarea>
+            <textarea class="form-control" rows="5" id="comment"
+              placeholder="자신의 장`단점, 특기, 성격, 좌우명 등 구체적으로 작성"></textarea>
           </div>
           <div class="form-group">
             <label class="control-label col-sm-2" for="comment">3-2.지원동기</label>
-            <textarea class="form-control" rows="5" id="comment"placeholder="대학생 서포터즈에 지원하게 된 이유, 계기 작성"></textarea>
+            <textarea class="form-control" rows="5" id="comment" placeholder="대학생 서포터즈에 지원하게 된 이유, 계기 작성"></textarea>
           </div>
           <div class="form-group">
             <label class="control-label col-sm-2" for="comment">3-3.활동각오</label>
-            <textarea class="form-control" rows="5" id="comment"placeholder="선발될 시 어떠한 마음가짐과 태도로 활동한 것인지에 대해 구체적으로 작성"></textarea>
+            <textarea class="form-control" rows="5" id="comment"
+              placeholder="선발될 시 어떠한 마음가짐과 태도로 활동한 것인지에 대해 구체적으로 작성"></textarea>
           </div>
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
