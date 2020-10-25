@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+
+.Python
+commaproject/
+
+db.sqlite3
+.DS_Store
+
+*.log
+*.pot
+*.pyc
+local_setting.py
+media
